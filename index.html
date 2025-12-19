@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuj</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #ff4081;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e73370;
+        }
+    </style>
+</head>
+<body>
+    <h1>witaj na kaireu.pl</h1>
+    <p>jak to widzisz to oznacza ze jestes cwelem</p>
+
+    <button id="magicBtn">nie klikaj tutoj</button>
+
+    <script>
+        const btn = document.getElementById('magicBtn');
+
+        btn.addEventListener('click', () => {
+            document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
+            alert('brawo cwelu');
+        });
+    </script>
+</body>
+</html>
