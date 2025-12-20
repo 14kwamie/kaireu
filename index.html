@@ -42,35 +42,38 @@
 <body>
     <h1 id="title">kaireu.pl</h1>
 
-<script>
-    const title = document.getElementById('title');
-    let hue = 0;
-
-    setInterval(() => {
-        title.style.color = `hsl(${hue}, 100%, 50%)`;
-        hue = (hue + 1) % 360;
-    }, 20);
-</script>
     <p>narazie ta strona nie ma zadnego sensu</p>
 
     <button id="magicBtn">nie klikaj tutaj kuuuurwa</button>
     <br><br>
-<button id="redirectBtn">Przejdź na moją drugą stronę</button>
-    <script>
-    const redirectBtn = document.getElementById('redirectBtn');
-
-    redirectBtn.addEventListener('click', () => {
-        window.location.href = 'https://pornhub.pl';
-    });
-    </script>
+    <button id="redirectBtn">Przejdź na moją drugą stronę</button>
 
     <script>
-        const btn = document.getElementById('magicBtn');
+        const title = document.getElementById('title');
+        const btnMagic = document.getElementById('magicBtn');
+        const redirectBtn = document.getElementById('redirectBtn');
 
-        btn.addEventListener('click', () => {
+        let hue = 0;
+
+        
+        setInterval(() => {
+            const color = `hsl(${hue}, 100%, 50%)`;
+            title.style.color = color;
+            btnMagic.style.border = `3px solid ${color}`;
+            redirectBtn.style.border = `3px solid ${color}`;
+            hue = (hue + 1) % 360;
+        }, 20);
+
+        
+        btnMagic.addEventListener('click', () => {
             document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
             document.body.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
             alert('Twoja przeglądarka Google Chrome nie jest w stanie obsłużyć w kurwe wielkiego wielkiego pliku.');
+        });
+
+    
+        redirectBtn.addEventListener('click', () => {
+            window.location.href = 'https://pornhub.pl';
         });
     </script>
 </body>
