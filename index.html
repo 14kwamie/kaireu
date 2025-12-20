@@ -59,8 +59,8 @@
         setInterval(() => {
             const color = `hsl(${hue}, 100%, 50%)`;
             title.style.color = color;
-            btnMagic.style.border = `3px solid ${color}`;
-            redirectBtn.style.border = `3px solid ${color}`;
+            btnMagic.style.border = `1px solid ${color}`;
+            redirectBtn.style.border = `1px solid ${color}`;
             hue = (hue + 1) % 360;
         }, 20);
 
@@ -68,7 +68,7 @@
         btnMagic.addEventListener('click', () => {
             document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
             document.body.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
-            alert('Twoja przeglądarka Google Chrome nie jest w stanie obsłużyć w kurwe wielkiego wielkiego pliku.');
+            alert('Twoja przeglądarka Google Chrome nie jest w stanie obsłużyć w kurwe wielkiego pliku.');
         });
 
     
@@ -78,6 +78,7 @@
     </script>
 </body>
 </html>
+
 
 
 
