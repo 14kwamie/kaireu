@@ -44,6 +44,15 @@
     <p>narazie ta strona nie ma zadnego sensu</p>
 
     <button id="magicBtn">nie klikaj tutaj bo dostaneisz epilepsji</button>
+    <br><br>
+<button id="redirectBtn">Przejdź na moją stronę</button>
+    <script>
+    const redirectBtn = document.getElementById('redirectBtn');
+
+    redirectBtn.addEventListener('click', () => {
+        window.location.href = 'https://twój-link.pl';
+    });
+    </script>
 
     <script>
         const btn = document.getElementById('magicBtn');
@@ -56,6 +65,7 @@
     </script>
 </body>
 </html>
+
 
 
 
