@@ -6,7 +6,6 @@
 <title>kaireu.pl</title>
 <link rel="icon" href="favicon.ico">
 <style>
-    /* Reset i podstawy */
     body, html {
         margin: 0;
         padding: 0;
@@ -14,67 +13,48 @@
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start; /* napis będzie wyżej */
         color: #00ff55;
-        background: #001100; /* jednolity ciemnozielony kolor */
+        background: #001100; /* jednolity kolor */
     }
 
     .container {
         text-align: center;
         width: 100%;
-        max-width: 400px;
-        padding: 30px;
-        border-radius: 20px;
-        background: #001100; /* dopasowane tło kontenera */
-        box-shadow: none; /* usuwa cień pod przyciskami */
+        max-width: 500px;
+        padding: 50px 20px 20px 20px;
     }
 
     h1 {
-        margin: 0 0 10px 0;
-        font-size: 2em;
+        margin: 0 0 30px 0;
+        font-size: 2.5em;
         color: #00ff55;
         text-shadow: 0 0 10px #00ff55;
     }
 
-    p {
-        margin: 0 0 20px 0;
-        font-size: 1em;
-        color: #a0ffa0;
+    #discord-widget {
+        width: 100%;
+        height: 350px;
+        border: none;
+        border-radius: 15px;
     }
 
-    .link-btn {
-        display: block;
-        text-decoration: none;
-        margin: 10px 0;
-        padding: 15px;
-        border-radius: 12px;
-        background: #003300; /* jednolity ciemnozielony przycisk */
-        color: #00ff55;
-        font-weight: bold;
-        transition: transform 0.2s, filter 0.2s;
-        text-shadow: 0 0 2px black;
-    }
-
-    .link-btn:hover {
-        transform: scale(1.05);
-        filter: brightness(1.3);
-    }
 </style>
 </head>
 <body>
+
 <div class="container">
     <h1>kaireu.pl</h1>
-    <p>Wszystkie moje linki w jednym miejscu</p>
 
-    <a class="link-btn" href="https://pl.pornhub.com/video/search?search=pussy+licking" target="_blank">Moja druga strona</a>
-    <a class="link-btn" href="#" id="magicBtn">Nie klikaj tutaj kuuuurwa</a>
+    <!-- Tu wstaw kod Discord widget, jeśli masz ID serwera -->
+    <!-- Przykład ze zmienionym server_id -->
+    <iframe id="discord-widget"
+        src="https://discord.com/widget?id=TU_TWOJE_SERVER_ID&theme=dark"
+        allowtransparency="true"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+    </iframe>
+
 </div>
 
-<script>
-    const btnMagic = document.getElementById('magicBtn');
-    btnMagic.addEventListener('click', () => {
-        alert('Twoja przeglądarka Google Chrome nie jest w stanie obsłużyć w kurwe wielkiego pliku.');
-    });
-</script>
 </body>
 </html>
