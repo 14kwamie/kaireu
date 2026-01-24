@@ -16,15 +16,7 @@
         justify-content: center;
         align-items: center;
         color: #00ff55;
-        background: linear-gradient(135deg, #000000, #003300); /* czarno-zielony gradient */
-        background-size: 400% 400%;
-        animation: gradientAnim 15s ease infinite;
-    }
-
-    @keyframes gradientAnim {
-        0% {background-position: 0% 50%;}
-        50% {background-position: 100% 50%;}
-        100% {background-position: 0% 50%;}
+        background: #001100; /* jednolity ciemnozielony kolor */
     }
 
     .container {
@@ -33,17 +25,8 @@
         max-width: 400px;
         padding: 30px;
         border-radius: 20px;
-        background: rgba(0,0,0,0.6); /* ciemne półprzezroczyste tło */
+        background: #001100; /* dopasowane tło kontenera */
         box-shadow: none; /* usuwa cień pod przyciskami */
-    }
-
-    .avatar {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        border: 3px solid #00ff55;
-        margin-bottom: 20px;
-        object-fit: cover;
     }
 
     h1 {
@@ -65,8 +48,8 @@
         margin: 10px 0;
         padding: 15px;
         border-radius: 12px;
-        background: linear-gradient(90deg, #003300, #00ff55);
-        color: #000;
+        background: #003300; /* jednolity ciemnozielony przycisk */
+        color: #00ff55;
         font-weight: bold;
         transition: transform 0.2s, filter 0.2s;
         text-shadow: 0 0 2px black;
@@ -80,7 +63,6 @@
 </head>
 <body>
 <div class="container">
-    <img class="avatar" src="avatar.jpg" alt="Avatar">
     <h1>kaireu.pl</h1>
     <p>Wszystkie moje linki w jednym miejscu</p>
 
