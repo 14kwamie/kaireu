@@ -13,9 +13,9 @@
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: flex-start; /* napis będzie wyżej */
+        align-items: flex-start;
         color: #00ff55;
-        background: #001100; /* jednolity ciemnozielony kolor */
+        background: #001100;
     }
 
     .container {
@@ -37,57 +37,28 @@
         font-size: 1em;
         color: #a0ffa0;
     }
-
-    #discord-widget {
-        width: 100%;
-        height: 350px;
-        border: none;
-        border-radius: 15px;
-    }
 </style>
 </head>
 <body>
 <div class="container">
     <h1>kaireu.pl</h1>
     <p>Wszystkie moje linki w jednym miejscu</p>
-
-    <!-- Discord widget - wstaw swoje server ID -->
-    <iframe id="discord-widget"
-        src="https://discord.com/widget?id=TU_TWOJE_SERVER_ID&theme=dark"
-        allowtransparency="true"
-        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
-    </iframe>
 </div>
 
 <script>
   // Blokada prawego kliknięcia
   document.addEventListener('contextmenu', event => event.preventDefault());
 
-  // Blokada F12, Ctrl+Shift+I/J, Ctrl+U
+  // Blokada skrótów F12, Ctrl+Shift+I/J, Ctrl+U
   document.addEventListener('keydown', function(e) {
-    if (e.key === "F12" || 
-        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
-        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') ||
-        (e.ctrlKey && e.key.toLowerCase() === 'u')) {
-      e.preventDefault();
-      alert('Nie rób tego!');
+    if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && (e.key.toLowerCase() === 'i' || e.key.toLowerCase() === 'j')) ||
+        (e.ctrlKey && e.key.toLowerCase() === 'u')
+    ) {
+        e.preventDefault();
     }
   });
-
-  // Wykrywanie otwartego DevTools
-  let devtools = {open: false};
-  setInterval(function() {
-      const start = new Date();
-      debugger; // zatrzymuje JS jeśli DevTools jest otwarte
-      if (new Date() - start > 100) {
-          if (!devtools.open) {
-              devtools.open = true;
-              alert("Nie kombinuj z DevTools!");
-          }
-      } else {
-          devtools.open = false;
-      }
-  }, 1000);
 </script>
 </body>
 </html>
