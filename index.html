@@ -1,114 +1,90 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9YSYNYLCZ9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kaireu.pl</title>
+<link rel="icon" href="favicon.ico">
+<style>
+    /* Reset i podstawy */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #ff6ec4, #7873f5);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
 
-  gtag('config', 'G-9YSYNYLCZ9');
-</script>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KM2MXPXT');</script>
-<!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>guwno</title>
-    <link rel="icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 100px;
-            background-color: #1a1a1a;
-            color: #f0f0f0;
-            transition: background-color 0.5s, color 0.5s;
-        }
+    .container {
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        background: rgba(0,0,0,0.4);
+    }
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
+    .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid white;
+        margin-bottom: 20px;
+        object-fit: cover;
+    }
 
-        button {
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            background-color: #ff4081;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            transition: background-color 0.3s;
-        }
+    h1 {
+        margin: 0 0 10px 0;
+        font-size: 2em;
+        background: linear-gradient(90deg, #ff6ec4, #7873f5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-        button:hover {
-            background-color: #e73370;
-        }
-    </style>
+    p {
+        margin: 0 0 20px 0;
+        font-size: 1em;
+        color: #ddd;
+    }
+
+    .link-btn {
+        display: block;
+        text-decoration: none;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 12px;
+        background: linear-gradient(90deg, #ff6ec4, #7873f5);
+        color: white;
+        font-weight: bold;
+        transition: transform 0.2s, filter 0.2s;
+    }
+
+    .link-btn:hover {
+        transform: scale(1.05);
+        filter: brightness(1.2);
+    }
+</style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KM2MXPXT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <h1 id="title">kaireu.pl</h1>
+<div class="container">
+    <img class="avatar" src="avatar.jpg" alt="Avatar">
+    <h1>kaireu.pl</h1>
+    <p>łee łee/p>
 
-    <p>narazie ta strona nie ma zadnego sensu</p>
+    <a class="link-btn" href="https://pl.pornhub.com/video/search?search=pussy+licking" target="_blank">Moja druga strona</a>
+    <a class="link-btn" href="#" id="magicBtn">Nie klikaj tutaj kuuuurwa</a>
+</div>
 
-    <button id="magicBtn">nie klikaj tutaj kuuuurwa</button>
-    <br><br>
-    <button id="redirectBtn">Przejdź na moją drugą stronę</button>
-
-    <script>
-        const title = document.getElementById('title');
-        const btnMagic = document.getElementById('magicBtn');
-        const redirectBtn = document.getElementById('redirectBtn');
-
-        let hue = 0;
-
-        
-        setInterval(() => {
-            const color = `hsl(${hue}, 100%, 50%)`;
-            title.style.color = color;
-            btnMagic.style.border = `1px solid ${color}`;
-            redirectBtn.style.border = `1px solid ${color}`;
-            hue = (hue + 1) % 360;
-        }, 20);
-
-        
-        btnMagic.addEventListener('click', () => {
-            document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-            document.body.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
-            alert('Twoja przeglądarka Google Chrome nie jest w stanie obsłużyć w kurwe wielkiego pliku.');
-        });
-
-    
-        redirectBtn.addEventListener('click', () => {
-            window.location.href = 'https://pl.pornhub.com/video/search?search=pussy+licking';
-        });
-    </script>
+<script>
+    const btnMagic = document.getElementById('magicBtn');
+    btnMagic.addEventListener('click', () => {
+        alert('Twoja przeglądarka Google Chrome nie jest w stanie obsłużyć w kurwe wielkiego pliku.');
+    });
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
